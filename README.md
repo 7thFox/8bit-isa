@@ -1,5 +1,5 @@
 # 8bit-isa
-Generates binary files to write to my 3 AT28C64B EEPROMs for my 8-bit computer.
+Generates binary files to write to 3 AT28C64B EEPROMs for my 8-bit computer.
 
 # background
 The AT28C64B has a 13-bit address space with 8-bit output, and my computer has ~20 control lines, and will require 3 EEPROMS.
