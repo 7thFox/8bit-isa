@@ -11,31 +11,37 @@ microcode = {
     OpCodes.ADD: [
         CtlWrd.A_IN | CtlWrd.STC_OE | CtlWrd.DEC_SC,
         CtlWrd.B_IN | CtlWrd.STC_OE,
-        CtlWrd.SUM_OE | CtlWrd.STC_IN | CtlWrd.FLG | CtlWrd.INC_PC,
+        CtlWrd.SUM_OE | CtlWrd.STC_IN | CtlWrd.FLG,
+        CtlWrd.INC_PC,
     ],
     OpCodes.SUB: [
         CtlWrd.A_IN | CtlWrd.STC_OE | CtlWrd.DEC_SC,
         CtlWrd.B_IN | CtlWrd.STC_OE,
-        CtlWrd.SUM_OE | CtlWrd.SUB | CtlWrd.STC_IN | CtlWrd.FLG | CtlWrd.INC_PC,
+        CtlWrd.SUM_OE | CtlWrd.SUB | CtlWrd.STC_IN | CtlWrd.FLG,
+        CtlWrd.INC_PC,
     ],
     OpCodes.LST: [
         CtlWrd.ROM_OE | CtlWrd.A_IN | CtlWrd.INC_SC,
         CtlWrd.A_S1,
-        CtlWrd.A_OE | CtlWrd.STC_IN | CtlWrd.INC_PC
+        CtlWrd.A_OE | CtlWrd.STC_IN,
+        CtlWrd.INC_PC,
     ],
     OpCodes.RST: [
         CtlWrd.ROM_OE | CtlWrd.A_IN | CtlWrd.INC_SC,
         CtlWrd.A_S0,
-        CtlWrd.A_OE | CtlWrd.STC_IN | CtlWrd.INC_PC
+        CtlWrd.A_OE | CtlWrd.STC_IN,
+        CtlWrd.INC_PC,
     ],
     OpCodes.PSH: [
         CtlWrd.ROM2A_NC | CtlWrd.INC_SC,
         0x00,  # Data Load
-        CtlWrd.A_OE | CtlWrd.STC_IN | CtlWrd.INC_PC
+        CtlWrd.A_OE | CtlWrd.STC_IN,
+        CtlWrd.INC_PC,
     ],
     OpCodes.DUP: [
         CtlWrd.STC_OE | CtlWrd.A_IN | CtlWrd.INC_SC,
-        CtlWrd.STC_IN | CtlWrd.A_OE | CtlWrd.INC_PC
+        CtlWrd.STC_IN | CtlWrd.A_OE,
+        CtlWrd.INC_PC,
     ],
     OpCodes.CAL: [
         CtlWrd.INC_SC,
